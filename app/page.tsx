@@ -1,62 +1,95 @@
-import { Box, Typography } from "@mui/material";
-import Image from "next/image";
+import { Box, Stack, Typography } from "@mui/material";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <Typography>{"CV for Ryosuke Takeuchi"}</Typography>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <Box marginBottom={"16px"}>
+        <div className={styles.description}>
+          <Typography>{"CV for Ryosuke Takeuchi"}</Typography>
         </div>
-      </div>
+      </Box>
       <Box display={"flex"} flexDirection={"row"} width={"100%"}>
-        <Box>
+        <Stack alignItems={"center"} spacing={"2px"}>
           <img
             src="2024-03-09_rtake_kagawa.jpg"
             style={{ width: "100px", height: "150px" }}
           />
-        </Box>
-        <Box flexGrow={1} m={1}>
-          <Typography variant="h5" sx={{ fontWeight: 600 }}>
-            {"Profile"}
-          </Typography>
-          <Box
-            sx={{
-              margin: 0,
-              opacity: 0.6,
-              fontSize: "0.9rem",
-              lineHeight: 1.5,
-              maxWidth: "500px",
-            }}
+          <a
+            href="https://learn.microsoft.com/api/credentials/share/ja-jp/RyosukeTakeuchi-3910/CF10E3A9D955CA0A?sharingId=4664DBFDE39D7EAA"
+            target="_blank"
           >
-            <Typography variant="inherit">
-              {
-                "- Graduated from Department of Chemistry, Faculty of Science, Hokkaido University in 2019"
-              }
+            <img
+              src="microsoft-certified-associate-badge.svg"
+              style={{ width: "70px", height: "70px" }}
+            />
+          </a>
+          <a
+            href="https://learn.microsoft.com/api/credentials/share/ja-jp/RyosukeTakeuchi-3910/A75B7FC2EDE24937?sharingId=4664DBFDE39D7EAA"
+            target="_blank"
+          >
+            <img
+              src="microsoft-certified-expert-badge.svg"
+              style={{ width: "70px", height: "70px" }}
+            />
+          </a>
+          <a
+            href="https://google.accredible.com/77f1dfb2-39eb-4d56-88d7-fabb55bd4c8a"
+            target="_blank"
+          >
+            <img src="gcp-ace.png" style={{ width: "70px", height: "70px" }} />
+          </a>
+        </Stack>
+        <Stack
+          flexGrow={1}
+          alignItems={"left"}
+          spacing={"16px"}
+          marginLeft={"16px"}
+        >
+          <Box>
+            <Typography variant="h6" sx={{ fontWeight: 600 }}>
+              {"Academic backgrounds"}
             </Typography>
-            <Typography variant="inherit">
-              {
-                "- Completed Master's program in Chemical Science and Engineering, Hokkaido University in 2021 and joined FUJIFILM"
-              }
-            </Typography>
+            <Typography variant="subtitle1">{"Hokkaido University"}</Typography>
+            <Box
+              sx={{
+                margin: 0,
+                opacity: 0.6,
+                fontSize: "0.9rem",
+                lineHeight: 1.5,
+              }}
+            >
+              <Typography variant="inherit">
+                {
+                  "Graduated from the Department of Chemistry, Faculty of Science in 2019. Completed the Master's program in the Graduate School of Chemical Sciences and Engineering in 2021."
+                }
+              </Typography>
+            </Box>
           </Box>
-        </Box>
+          <Box>
+            <Typography variant="h6" sx={{ fontWeight: 600 }}>
+              {"Careers"}
+            </Typography>
+            <Typography variant="subtitle1">
+              {"FUJIFILM Imaging Imformatics Laboratory"}
+            </Typography>
+            <Box
+              sx={{
+                margin: 0,
+                opacity: 0.6,
+                fontSize: "0.9rem",
+                lineHeight: 1.5,
+              }}
+            >
+              <Typography variant="inherit">
+                {"- Research in the field of bioinfomatics"}
+              </Typography>
+              <Typography variant="inherit">
+                {"- Softweer engineering(Client-side, Server-side, Cloud)"}
+              </Typography>
+            </Box>
+          </Box>
+        </Stack>
       </Box>
       <div className={styles.grid}>
         <a
