@@ -2,6 +2,7 @@ import BusinessIcon from "@mui/icons-material/Business";
 import SchoolIcon from "@mui/icons-material/School";
 import { Box, Stack, Typography } from "@mui/material";
 import styles from "./page.module.css";
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -45,13 +46,20 @@ export default function Home() {
           flexGrow={1}
           alignItems={"left"}
           spacing={"16px"}
-          marginLeft={"16px"}
+          marginLeft={"32px"}
         >
           <Box>
-            <Stack direction={"row"} alignItems={"center"} spacing={"2px"}>
-              <SchoolIcon />
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              spacing={"2px"}
+              className={styles.title}
+            >
+              <span>
+                <SchoolIcon />
+              </span>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                {"Academic backgrounds"}
+                {"Educational background"}
               </Typography>
             </Stack>
             <Typography variant="subtitle1">{"Hokkaido University"}</Typography>
@@ -71,10 +79,17 @@ export default function Home() {
             </Box>
           </Box>
           <Box>
-            <Stack direction={"row"} alignItems={"center"} spacing={"2px"}>
-              <BusinessIcon />
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              spacing={"2px"}
+              className={styles.title}
+            >
+              <span>
+                <BusinessIcon />
+              </span>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                {"Careers"}
+                {"Career"}
               </Typography>
             </Stack>
             <Typography variant="subtitle1">
@@ -98,30 +113,6 @@ export default function Home() {
           </Box>
         </Stack>
       </Stack>
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-      </div>
     </main>
   );
 }

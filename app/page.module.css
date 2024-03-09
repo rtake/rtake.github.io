@@ -59,6 +59,14 @@
   transition: transform 200ms;
 }
 
+.title span {
+  transition: transform 200ms;
+}
+
+.title:hover span {
+  transform: translateY(-2px);
+}
+
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
