@@ -1,4 +1,5 @@
 import BusinessIcon from "@mui/icons-material/Business";
+import ConstructionIcon from "@mui/icons-material/Construction";
 import SchoolIcon from "@mui/icons-material/School";
 import { Box, Stack, Typography } from "@mui/material";
 import styles from "./page.module.css";
@@ -20,26 +21,29 @@ export default function Home() {
           <a
             href="https://learn.microsoft.com/api/credentials/share/ja-jp/RyosukeTakeuchi-3910/CF10E3A9D955CA0A?sharingId=4664DBFDE39D7EAA"
             target="_blank"
+            className={styles.badge}
           >
             <img
               src="microsoft-certified-associate-badge.svg"
-              style={{ width: "70px", height: "70px" }}
+              style={{ width: "50px", height: "50px" }}
             />
           </a>
           <a
             href="https://learn.microsoft.com/api/credentials/share/ja-jp/RyosukeTakeuchi-3910/A75B7FC2EDE24937?sharingId=4664DBFDE39D7EAA"
             target="_blank"
+            className={styles.badge}
           >
             <img
               src="microsoft-certified-expert-badge.svg"
-              style={{ width: "70px", height: "70px" }}
+              style={{ width: "50px", height: "50px" }}
             />
           </a>
           <a
             href="https://google.accredible.com/77f1dfb2-39eb-4d56-88d7-fabb55bd4c8a"
             target="_blank"
+            className={styles.badge}
           >
-            <img src="gcp-ace.png" style={{ width: "70px", height: "70px" }} />
+            <img src="gcp-ace.png" style={{ width: "50px", height: "50px" }} />
           </a>
         </Stack>
         <Stack
@@ -108,6 +112,39 @@ export default function Home() {
               </Typography>
               <Typography variant="inherit">
                 {"- Softweer engineering(Client-side, Server-side, Cloud)"}
+              </Typography>
+            </Box>
+          </Box>
+          <Box>
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              spacing={"2px"}
+              className={styles.title}
+            >
+              <span>
+                <ConstructionIcon />
+              </span>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                {"Skills"}
+              </Typography>
+            </Stack>
+            <Box
+              sx={{
+                margin: 0,
+                opacity: 0.6,
+                fontSize: "0.9rem",
+                lineHeight: 1.5,
+              }}
+            >
+              <Typography variant="inherit">
+                {"- TypeScript(Node.js, React, Next.js)"}
+              </Typography>
+              <Typography variant="inherit">{"- Python, R"}</Typography>
+              <Typography variant="inherit">{"- C/C++"}</Typography>
+              <Typography variant="inherit">{"- SQL(BigQuery)"}</Typography>
+              <Typography variant="inherit">
+                {"- Microsoft Azure(App Service, OpenAI Service, ...)"}
               </Typography>
             </Box>
           </Box>

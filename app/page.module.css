@@ -67,6 +67,14 @@
   transform: translateY(-2px);
 }
 
+.badge img {
+  transition: transform 200ms;
+}
+
+.badge:hover img {
+  transform: translateY(-1px);
+}
+
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
