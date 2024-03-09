@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -27,9 +28,32 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div>
-        <img src="2024-03-09_rtake_kagawa.jpg" />
-      </div>
+      <Box display={"flex"} flexDirection={"row"} width={"100%"}>
+        <Box>
+          <img
+            src="2024-03-09_rtake_kagawa.jpg"
+            style={{ width: "100px", height: "150px" }}
+          />
+        </Box>
+        <Box flexGrow={1} m={1}>
+          <a className={styles.card}>
+            <h2>Profile</h2>
+            <Typography
+              sx={{
+                margin: 0,
+                opacity: 0.6,
+                fontSize: "0.9rem",
+                lineHeight: 1.5,
+                maxWidth: "30ch",
+                overflowWrap: "break-word",
+              }}
+            >
+              I'm Ryosuke Takeuchi.
+            </Typography>
+            <p>I'm Ryosuke Takeuchi.</p>
+          </a>
+        </Box>
+      </Box>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -42,7 +66,6 @@ export default function Home() {
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
         </a>
-
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -54,7 +77,6 @@ export default function Home() {
           </h2>
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
-
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -66,7 +88,6 @@ export default function Home() {
           </h2>
           <p>Explore starter templates for Next.js.</p>
         </a>
-
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
