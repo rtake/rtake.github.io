@@ -35,23 +35,21 @@ export default function Home() {
             style={{ width: "100px", height: "150px" }}
           />
         </Box>
-        <Box flexGrow={1} m={1}>
-          <a className={styles.card}>
-            <h2>Profile</h2>
-            <Typography
-              sx={{
-                margin: 0,
-                opacity: 0.6,
-                fontSize: "0.9rem",
-                lineHeight: 1.5,
-                maxWidth: "30ch",
-                overflowWrap: "break-word",
-              }}
-            >
-              I'm Ryosuke Takeuchi.
-            </Typography>
-            <p>I'm Ryosuke Takeuchi.</p>
-          </a>
+        <Box flexGrow={1} m={1} className={styles.card}>
+          <h2>Profile</h2>
+          <Typography
+            sx={{
+              margin: 0,
+              opacity: 0.6,
+              fontSize: "0.9rem",
+              lineHeight: 1.5,
+              maxWidth: "30ch",
+              overflowWrap: "break-word",
+            }}
+          >
+            {"I'm Ryosuke Takeuchi."}
+          </Typography>
+          <p>{"I'm Ryosuke Takeuchi."}</p>
         </Box>
       </Box>
       <div className={styles.grid}>
