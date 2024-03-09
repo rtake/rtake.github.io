@@ -1,15 +1,16 @@
+import BusinessIcon from "@mui/icons-material/Business";
+import SchoolIcon from "@mui/icons-material/School";
 import { Box, Stack, Typography } from "@mui/material";
 import styles from "./page.module.css";
-
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Box marginBottom={"16px"}>
+      <Box>
         <div className={styles.description}>
           <Typography>{"CV for Ryosuke Takeuchi"}</Typography>
         </div>
       </Box>
-      <Box display={"flex"} flexDirection={"row"} width={"100%"}>
+      <Stack flexDirection={"row"}>
         <Stack alignItems={"center"} spacing={"2px"}>
           <img
             src="2024-03-09_rtake_kagawa.jpg"
@@ -47,9 +48,12 @@ export default function Home() {
           marginLeft={"16px"}
         >
           <Box>
-            <Typography variant="h6" sx={{ fontWeight: 600 }}>
-              {"Academic backgrounds"}
-            </Typography>
+            <Stack direction={"row"} alignItems={"center"} spacing={"2px"}>
+              <SchoolIcon />
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                {"Academic backgrounds"}
+              </Typography>
+            </Stack>
             <Typography variant="subtitle1">{"Hokkaido University"}</Typography>
             <Box
               sx={{
@@ -67,9 +71,12 @@ export default function Home() {
             </Box>
           </Box>
           <Box>
-            <Typography variant="h6" sx={{ fontWeight: 600 }}>
-              {"Careers"}
-            </Typography>
+            <Stack direction={"row"} alignItems={"center"} spacing={"2px"}>
+              <BusinessIcon />
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                {"Careers"}
+              </Typography>
+            </Stack>
             <Typography variant="subtitle1">
               {"FUJIFILM Imaging Imformatics Laboratory"}
             </Typography>
@@ -90,7 +97,7 @@ export default function Home() {
             </Box>
           </Box>
         </Stack>
-      </Box>
+      </Stack>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
