@@ -6,10 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+        <Typography>{"CV for Ryosuke Takeuchi"}</Typography>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -35,21 +32,30 @@ export default function Home() {
             style={{ width: "100px", height: "150px" }}
           />
         </Box>
-        <Box flexGrow={1} m={1} className={styles.card}>
-          <h2>Profile</h2>
-          <Typography
+        <Box flexGrow={1} m={1}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            {"Profile"}
+          </Typography>
+          <Box
             sx={{
               margin: 0,
               opacity: 0.6,
               fontSize: "0.9rem",
               lineHeight: 1.5,
-              maxWidth: "30ch",
-              overflowWrap: "break-word",
+              maxWidth: "500px",
             }}
           >
-            {"I'm Ryosuke Takeuchi."}
-          </Typography>
-          <p>{"I'm Ryosuke Takeuchi."}</p>
+            <Typography variant="inherit">
+              {
+                "- Graduated from Department of Chemistry, Faculty of Science, Hokkaido University in 2019"
+              }
+            </Typography>
+            <Typography variant="inherit">
+              {
+                "- Completed Master's program in Chemical Science and Engineering, Hokkaido University in 2021 and joined FUJIFILM"
+              }
+            </Typography>
+          </Box>
         </Box>
       </Box>
       <div className={styles.grid}>
@@ -74,30 +80,6 @@ export default function Home() {
             Learn <span>-&gt;</span>
           </h2>
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
         </a>
       </div>
     </main>
